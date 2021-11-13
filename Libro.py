@@ -26,3 +26,18 @@ class Libro():
 
     def setISBN(self,ISBN):
         self.ISBN=ISBN
+
+    def getTitulo(self):
+        return self.titulo
+
+    def getAutor(self):
+        return self.autor
+
+    def getFecha(self):
+        return self.Fecha
+
+    def getEditorial(self):
+        return self.editorial
+
+    def getISBN(self):
+        return self.ISBN
