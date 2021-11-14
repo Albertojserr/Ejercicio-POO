@@ -2,11 +2,7 @@ import random
 
 
 class CuentaBancaria():
-    # id=""
-    # titular=""
-    # fecha=""
-    # numerocuenta=0
-    # saldo=0
+
     def __init__(self,id,titular,fecha,numerocuenta,saldo):
         self.id=id
         self.titular=titular
