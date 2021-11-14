@@ -46,13 +46,13 @@ class Nodo:
         while copia.siguiente!= None:
             copia=copia.siguiente
         return copia
-
+#Imprimir desde cualquier nodo hasta el final
     def imprimir(self):
         copia=self
         while copia!=None:
             print(copia.getvalue())
             copia=copia.siguiente
-
+#Imprimir todo desde el principio
     def imprimirdesdeprincipio(self):
         copia=self.primero()
         while copia!=None:
@@ -69,15 +69,16 @@ if __name__ == '__main__':
     elemento=Nodo(30)
     elemento=elemento.añadirSiguiente(Nodo(50))
     elemento=elemento.añadirSiguiente(Nodo(32))
+    print("Imprimir con tres nodos")
     elemento.primero().imprimir()
     nodoborrar=elemento
     elemento=elemento.añadirSiguiente(Nodo(88))
     elemento=elemento.añadirAnterior(Nodo(54))
-    print("")
+    print("Imprimir añadiendo detrás de un nodo")
     elemento.primero().imprimir()
     elemento=nodoborrar.añadirSiguiente(Nodo(1))
     nodoborrar.eliminar()
-    print("")
+    print("Lista desde el principio")
     elemento.imprimirdesdeprincipio()
-    print("")
+    print("Lista al revés")
     elemento.imprimirdesdefinal()
