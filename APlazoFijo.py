@@ -1,5 +1,4 @@
-from CuentaBancaria import CuentaBancaria
-
+from CuentaBancaria import CuentaBancaria,fechatostring, compararfechas
 
 class APlazoFijo(CuentaBancaria):
     def __init__(self,id,titular,fecha,numerocuenta,saldo,vencimiento):
@@ -7,6 +6,11 @@ class APlazoFijo(CuentaBancaria):
         self.vencimiento=vencimiento
 
     def retirardinero(self,dinero,fechaactual):
-        if(fechaactual<self.vencimiento):
+        if(compararfechas(fechaactual,self.vencimiento)<0):
             dinero=dinero*1.05
-        CuentaBancaria.retirardinero(dinero)
+        CuentaBancaria.retirardinero(self,dinero)
+
+
+    def cuenta(self):
+        cuentastr=CuentaBancaria.cuenta(self)
+        return cuentastr + " Cuenta a plazo fijo con vencimento " + fechatostring(self.vencimiento)

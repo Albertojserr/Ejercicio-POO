@@ -18,3 +18,7 @@ class VIP(CuentaBancaria):
             cuenta.saldo=cuenta.saldo+dinero
         else:
             print("Error, el dinero a transferir está fuera de tu limite")
+
+    def cuenta(self):
+        cuentastr=CuentaBancaria.cuenta(self)
+        return cuentastr + " Cuenta VIP con limite negativo de " + str(self.negativo)
