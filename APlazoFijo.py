@@ -10,7 +10,6 @@ class APlazoFijo(CuentaBancaria):
             dinero=dinero*1.05
         CuentaBancaria.retirardinero(self,dinero)
 
-
     def cuenta(self):
         cuentastr=CuentaBancaria.cuenta(self)
         return cuentastr + " Cuenta a plazo fijo con vencimento " + fechatostring(self.vencimiento)

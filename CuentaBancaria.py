@@ -10,7 +10,6 @@ class CuentaBancaria():
         self.numerocuenta=numerocuenta
         self.saldo=saldo
 
-
     def setid(self,id):
         self.id=id
 

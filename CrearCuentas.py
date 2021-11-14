@@ -26,7 +26,6 @@ class CreadorCuenta():
         CreadorCuenta.__id+=1
 
 
-
 if __name__ == '__main__':
     Cuenta1=CreadorCuenta("CuentaBancaria","Paco")
     Cuenta2=CreadorCuenta("APlazoFijo","Benito")

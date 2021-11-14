@@ -1,6 +1,5 @@
 from CuentaBancaria import CuentaBancaria
 
-
 class VIP(CuentaBancaria):
     def __init__(self,id,titular,fecha,numerocuenta,saldo,negativo):
         CuentaBancaria.__init__(self,id,titular,fecha,numerocuenta,saldo)
